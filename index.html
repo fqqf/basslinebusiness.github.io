@@ -4,37 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alice Dvachevskaya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    /* Основной стиль для страницы */
+    /* Основной стиль страницы */
     body {
-      font-family: Arial, sans-serif;
-      background-color: #000;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #000, #111);
       color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
     }
 
-    /* Контейнер для содержимого */
+    /* Контейнер содержимого */
     .container {
       text-align: center;
-      max-width: 5000px;
-      width: 100%;
+      max-width: 400px;
+      width: 90%;
       padding: 20px;
       box-sizing: border-box;
-      transform: scale(1.7);
+      transform: scale(1.2);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.2s ease;
     }
 
-    /* Стиль аватара */
+    /* Стиль для аватара */
     .avatar {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       overflow: hidden;
-      margin: 0 auto 10px;
+      margin: 0 auto 15px;
+      border: 3px solid #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 
     .avatar img {
@@ -44,43 +52,50 @@
 
     /* Имя пользователя и должность */
     .username {
-      font-size: 24px;
-      font-weight: bold;
+      font-size: 26px;
+      font-weight: 600;
       margin: 10px 0 5px;
     }
 
     .title {
-      font-size: 16px;
+      font-size: 14px;
       color: #bbb;
       margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     /* Текстовый блок */
     .text {
-      font-size: 15px;
-      color: #fff;
+      font-size: 14px;
+      color: #ddd;
       margin-bottom: 20px;
     }
 
-    /* Стиль для каждой ссылки */
+    /* Стиль ссылок */
     .link {
       display: block;
-      width: 100%;
-      text-align: center;
       padding: 15px;
       margin: 10px 0;
       color: #fff;
-      background-color: #4b3b2b;
-      border-radius: 10px;
+      background-color: #1e1e1e;
+      border-radius: 8px;
       text-decoration: none;
-      font-size: 18px;
-      transition: background-color 0.3s ease;
-      box-sizing: border-box;
+      font-size: 16px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     }
 
-    /* Эффект при наведении */
+    /* Эффекты при наведении */
     .link:hover {
-      background-color: #7d6145;
+      background-color: #333;
+      transform: translateY(-5px);
+    }
+
+    /* Анимация для контейнера */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.2); }
     }
   </style>
 </head>
