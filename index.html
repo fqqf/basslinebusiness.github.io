@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,6 +18,30 @@
       margin: 0;
     }
 
+    /* Верхний бар */
+    .navbar {
+      width: 100%;
+      background-color: rgba(30, 30, 30, 0.9);
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
     /* Контейнер содержимого */
     .container {
       text-align: center;
@@ -26,12 +49,12 @@
       width: 90%;
       padding: 20px;
       box-sizing: border-box;
-      transform: scale(1.2);
       background: rgba(255, 255, 255, 0.1);
       border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(10px);
       animation: fadeIn 1.2s ease;
+      margin-top: 80px; /* Увеличено для учёта высоты navbar */
     }
 
     /* Стиль для аватара */
@@ -97,9 +120,62 @@
       from { opacity: 0; transform: scale(1); }
       to { opacity: 1; transform: scale(1.2); }
     }
+
+    /* Контейнер для изображений проектов */
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    /* Стиль для каждого изображения проекта */
+    .project {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .project img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    .project-link {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      color: #fff;
+      font-weight: 600;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: opacity 0.3s ease;
+    }
+
+    .project:hover .project-link {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
+
+ <!-- <div class="navbar">
+    <a href="#projects">ПОТОМ ИСПОЛЬЗУЮ!!!!!</a>
+    <a href="#projects">Contact me</a>
+  </div> -->
 
   <div class="container">
     <div class="avatar">
@@ -114,6 +190,22 @@
     <a href="https://discord.gg/SUcQfnxQrA" class="link">Discord blog</a>
     <a href="https://icx.itch.io" class="link">Itch.io page</a>
     <a href="https://t.me/miracula_dev" class="link">Telegram channel</a>
+    <div class="text" style="margin-top: 20px; margin-bottom: 20px;">My projects:</div>
+    <!-- Галерея проектов -->
+    <div class="projects" id="projects">
+      <div class="project">
+        <a href="https://icx.itch.io/decide-their-fate" class="project-link">Decide Their Fate!</a>
+        <img src="https://img.itch.zone/aW1nLzE3MjU4NDkyLnBuZw==/315x250%23c/sN6eEA.png" alt="Project 1">
+      </div>
+      <div class="project">
+        <a href="https://icx.itch.io/jira" class="project-link">Jira</a>
+        <img src="https://img.itch.zone/aW1nLzEwNTk2MDQ2LnBuZw==/315x250%23c/DXZePD.png" alt="Project 2">
+      </div>
+      <div class="project">
+        <a href="https://icx.itch.io/melancholy-fight" class="project-link">Melancholy Story</a>
+        <img src="https://img.itch.zone/aW1nLzc5NzU2NTMucG5n/315x250%23c/fOwjmw.png" alt="Project 3">
+      </div>
+    </div>
   </div>
 
 </body>
