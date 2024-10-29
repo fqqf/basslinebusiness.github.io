@@ -18,52 +18,29 @@
       margin: 0;
     }
 
-    /* Верхний бар */
-    .navbar {
-      width: 100%;
-      background-color: rgba(30, 30, 30, 0.9);
-      padding: 10px 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .navbar a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 15px;
-      transition: background-color 0.3s ease;
-    }
-
-    .navbar a:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
     /* Контейнер содержимого */
     .container {
       text-align: center;
-      max-width: 400px;
-      width: 90%;
-      padding: 20px;
+      max-width: 480px; /* Увеличено с 400px до 480px */
+      width: 72%; /* Увеличено с 60% до 72% */
+      padding: 24px 24px; /* Увеличен верхний и нижний отступ до 24px */
       box-sizing: border-box;
+      transform: scale(1); /* Масштаб остается прежним */
       background: rgba(255, 255, 255, 0.1);
       border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(10px);
       animation: fadeIn 1.2s ease;
-      margin-top: 80px; /* Увеличено для учёта высоты navbar */
+      margin: 24px 0; /* Увеличены отступы сверху и снизу до 24px */
     }
 
     /* Стиль для аватара */
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 144px; /* Увеличено с 120px до 144px */
+      height: 144px; /* Увеличено с 120px до 144px */
       border-radius: 50%;
       overflow: hidden;
-      margin: 0 auto 15px;
+      margin: 0 auto 18px; /* Увеличен нижний отступ до 18px */
       border: 3px solid #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
@@ -75,36 +52,36 @@
 
     /* Имя пользователя и должность */
     .username {
-      font-size: 26px;
+      font-size: 31.2px; /* Увеличено с 26px до 31.2px */
       font-weight: 600;
-      margin: 10px 0 5px;
+      margin: 12px 0 6px; /* Увеличены отступы до 12px и 6px */
     }
 
     .title {
-      font-size: 14px;
+      font-size: 16.8px; /* Увеличено с 14px до 16.8px */
       color: #bbb;
-      margin-bottom: 20px;
+      margin-bottom: 24px; /* Увеличен нижний отступ до 24px */
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
     /* Текстовый блок */
     .text {
-      font-size: 14px;
+      font-size: 16.8px; /* Увеличено с 14px до 16.8px */
       color: #ddd;
-      margin-bottom: 20px;
+      margin-bottom: 24px; /* Увеличен нижний отступ до 24px */
     }
 
     /* Стиль ссылок */
     .link {
       display: block;
-      padding: 15px;
-      margin: 10px 0;
+      padding: 18px; /* Увеличено с 15px до 18px */
+      margin: 12px 0; /* Увеличены отступы до 12px */
       color: #fff;
       background-color: #1e1e1e;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 19.2px; /* Увеличено с 16px до 19.2px */
       transition: transform 0.3s ease, background-color 0.3s ease;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     }
@@ -117,16 +94,16 @@
 
     /* Анимация для контейнера */
     @keyframes fadeIn {
-      from { opacity: 0; transform: scale(1); }
-      to { opacity: 1; transform: scale(1.2); }
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     /* Контейнер для изображений проектов */
     .projects {
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      margin-top: 30px;
+      gap: 18px; /* Увеличен промежуток до 18px */
+      margin-top: 36px; /* Увеличен верхний отступ до 36px */
     }
 
     /* Стиль для каждого изображения проекта */
@@ -159,7 +136,7 @@
       opacity: 0;
       color: #fff;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 21.6px; /* Увеличено с 18px до 21.6px */
       text-decoration: none;
       border-radius: 10px;
       transition: opacity 0.3s ease;
@@ -172,11 +149,6 @@
 </head>
 <body>
 
- <!-- <div class="navbar">
-    <a href="#projects">ПОТОМ ИСПОЛЬЗУЮ!!!!!</a>
-    <a href="#projects">Contact me</a>
-  </div> -->
-
   <div class="container">
     <div class="avatar">
       <img src="icon.png" alt="Avatar">
@@ -186,11 +158,11 @@
     <div class="text">Contact me, let's write games together =)</div>
     <a href="https://x.com/_miracula" class="link">Twitter</a>
     <a href="https://t.me/tinyfe" class="link">Telegram</a>
-    <div class="text" style="margin-top: 20px; margin-bottom: 20px;">Aaand... here are my personal blogs about gamedev and stuff:</div>
+    <div class="text" style="margin-top: 24px; margin-bottom: 24px;">Aaand... here are my personal blogs about gamedev and stuff:</div>
     <a href="https://discord.gg/SUcQfnxQrA" class="link">Discord blog</a>
     <a href="https://icx.itch.io" class="link">Itch.io page</a>
     <a href="https://t.me/miracula_dev" class="link">Telegram channel</a>
-    <div class="text" style="margin-top: 20px; margin-bottom: 20px;">My projects:</div>
+    <div class="text" style="margin-top: 36px; margin-bottom: 0px;">My projects:</div>
     <!-- Галерея проектов -->
     <div class="projects" id="projects">
       <div class="project">
